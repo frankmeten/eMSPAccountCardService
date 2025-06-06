@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  emsp-account-card-service:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+    depends_on:
+      - db
+  db:
+  
+    image: postgres:15
+    environment:
+      POSTGRES_DB: emsp
+      POSTGRES_USER: emspuser
+      POSTGRES_PASSWORD: emsppass
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata:
+
