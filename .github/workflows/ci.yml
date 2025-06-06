@@ -14,7 +14,7 @@ jobs:
         image: postgres:latest
         env:
           POSTGRES_USER: emspuser
-          POSTGRES_PASSWORD: emspuser
+          POSTGRES_PASSWORD: emsppass
           POSTGRES_DB: emsp
         ports:
           - 5432:5432
