@@ -12,6 +12,7 @@ This project implements a RESTful API for managing Accounts and Cards for an eMS
 - Unit tests
 - GitHub Actions CI pipeline
 - Domain-Driven Design
+- **Swagger/OpenAPI documentation**
 
 ## Getting Started
 
@@ -36,6 +37,13 @@ mvn test
 ```bash
 docker build -t emsp-account-card-service .
 ```
+
+## API Documentation
+
+After starting the application, access the Swagger UI at:
+
+- [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+- [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
 
 ## Project Structure
 - `src/main/java/com/example/emsp/domain` - Domain models
