@@ -60,4 +60,21 @@
       <version>2.5.0</version>
     </dependency>
   </dependencies>
+  <build>
+    <plugins>
+      <!-- ...other plugins... -->
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <version>3.2.6</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>repackage</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 </project>
