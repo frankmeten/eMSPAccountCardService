@@ -6,7 +6,7 @@ services:
       - "8080:8080"
     environment:
       - SPRING_PROFILES_ACTIVE=prod
-      - JDBC_DATABASE_URL=jdbc:postgresql://db:5432/emsp
+      - JDBC_DATABASE_URL=jdbc:postgresql://postgres-db:5432/emsp
       - JDBC_DATABASE_USERNAME=emspuser
       - JDBC_DATABASE_PASSWORD=emsppass
     depends_on:

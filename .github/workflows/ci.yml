@@ -34,3 +34,7 @@ jobs:
         run: mvn test
       - name: Build Docker image
         run: docker build -t emsp-account-card-service .
+    env:
+      JDBC_DATABASE_URL: jdbc:postgresql://localhost:5432/emsp
+      JDBC_DATABASE_USERNAME: emspuser
+      JDBC_DATABASE_PASSWORD: emsppass
