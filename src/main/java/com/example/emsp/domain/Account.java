@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 import lombok.*;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -24,6 +25,18 @@ public class Account {
     @Column(unique = true, nullable = false)
     private String email;
 
+    // Lombok 不要自动生成 setEmaid
+    @Setter(AccessLevel.NONE)
+    @NotBlank
+    @Pattern(
+        regexp = "[a-z]{2}(-?)[\\da-z]{3}\\1[\\da-z]{9}(\\1[\\da-z])?",
+        flags = Pattern.Flag.CASE_INSENSITIVE,
+        message = "Invalid EMAID format"
+    )
+    @Column(unique = true, nullable = false, length = 14)
+    private String emaid;
+
+
     @NotNull
     @Enumerated(EnumType.STRING)
     private AccountStatus status;
@@ -33,6 +46,18 @@ public class Account {
 
     @Column(nullable = false)
     private LocalDateTime lastUpdated;
+
+    public void setEmaid(String emaid) {
+        if (emaid != null) {
+            String cleaned = emaid.replace("-", "");
+            if (cleaned.length() == 15) {
+                cleaned = cleaned.substring(0, 14);
+            }
+            this.emaid = cleaned;
+        } else {
+            this.emaid = null;
+        }
+    }
 
     @PrePersist
     @PreUpdate

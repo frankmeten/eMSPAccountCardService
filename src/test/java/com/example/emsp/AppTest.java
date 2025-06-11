@@ -28,7 +28,10 @@ public class AppTest {
 
     @Test
     void testCreateAccount() {
-        Account account = Account.builder().email("test@example.com").status(Account.AccountStatus.CREATED).build();
+        // /[a-z]{2}(-?)[\\da-z]{3}\\1[\\da-z]{9}(\\1[\\da-z])?/i
+        // Account account = Account.builder().email("test@example.com").emaid("CN-123-987654321-z").status(Account.AccountStatus.CREATED).build();
+        Account account = Account.builder().email("test@example.com").emaid("CN123987654321").status(Account.AccountStatus.CREATED).build();
+        // Account account = Account.builder().email("test@example.com").emaid("ABC").status(Account.AccountStatus.CREATED).build();
         Account saved = accountRepository.save(account);
         Assertions.assertNotNull(saved.getId());
         Assertions.assertEquals("test@example.com", saved.getEmail());
@@ -36,7 +39,7 @@ public class AppTest {
 
     @Test
     void testCreateCard() {
-        Card card = Card.builder().cardNumber("1234567890").status(Card.CardStatus.CREATED).build();
+        Card card = Card.builder().cardNumber("1234567890").rfid((long) 123456).status(Card.CardStatus.CREATED).build();
         Card saved = cardRepository.save(card);
         Assertions.assertNotNull(saved.getId());
         Assertions.assertEquals("1234567890", saved.getCardNumber());

@@ -1,0 +1,15 @@
+CREATE TABLE account (
+    id BIGSERIAL PRIMARY KEY,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    emaid VARCHAR(14) NOT NULL UNIQUE,
+    status VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE card (
+    id BIGSERIAL PRIMARY KEY,
+    card_number VARCHAR(255) NOT NULL UNIQUE,
+    status VARCHAR(20) NOT NULL,
+    account_id BIGINT REFERENCES account(id),
+    last_updated TIMESTAMP NOT NULL,
+    rfid BIGINT NOT NULL UNIQUE
+);

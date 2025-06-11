@@ -26,6 +26,10 @@ public class AccountService {
         if (accountRepository.existsByEmail(account.getEmail())) {
             throw new IllegalArgumentException("Email already exists");
         }
+
+        if (accountRepository.existsByEmaid(account.getEmaid())) {
+            throw new IllegalArgumentException("Emaid already exists");
+        }
         account.setStatus(Account.AccountStatus.CREATED);
         return accountRepository.save(account);
     }

@@ -32,6 +32,10 @@ public class Card {
     @Column(nullable = false)
     private LocalDateTime lastUpdated;
 
+    @NotNull
+    @Column(nullable = false, unique = true)
+    private Long rfid;
+
     @PrePersist
     @PreUpdate
     public void updateTimestamp() {
