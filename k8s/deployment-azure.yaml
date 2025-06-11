@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: emsp-account-card-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: emsp-account-card-service
+  template:
+    metadata:
+      labels:
+        app: emsp-account-card-service
+    spec:
+      containers:
+        - name: emsp-account-card-service
+          image: emspacr.azurecr.io/emsp-account-card-service:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: JDBC_DATABASE_URL
+              value: "jdbc:postgresql://emsp.postgres.database.azure.com:5432/emsp"
+            - name: JDBC_DATABASE_USERNAME
+              value: "emspuser"
+            - name: JDBC_DATABASE_PASSWORD
+              value: "pass0@Frank"
