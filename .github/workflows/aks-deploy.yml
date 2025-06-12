@@ -14,7 +14,24 @@ jobs:
 
   build-deploy:
     runs-on: ubuntu-latest
- 
+
+    env:
+      JDBC_DATABASE_URL: jdbc:postgresql://localhost:5432/emsp
+      JDBC_DATABASE_USERNAME: emspuser
+      JDBC_DATABASE_PASSWORD: emsppass
+
+    services:
+      postgres:
+        image: postgres:latest
+        env:
+          POSTGRES_USER: emspuser
+          POSTGRES_PASSWORD: emsppass
+          POSTGRES_DB: emsp
+        ports:
+          - 5432:5432
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+
+
     steps:
       - uses: actions/checkout@v4
       - name: Set up JDK 17
