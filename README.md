@@ -38,12 +38,6 @@ mvn test
 docker build -t emsp-account-card-service .
 ```
 
-## API Documentation
-
-After starting the application, access the Swagger UI at:
-
-- [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
-- [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
 
 ## Project Structure
 - `src/main/java/com/example/emsp/domain` - Domain models
@@ -55,5 +49,21 @@ After starting the application, access the Swagger UI at:
 ## License
 Apache 2.0
 
-try Build and Deploy to AKS 
-flyway
+
+## API Documentation
+
+After starting the application, access the Swagger UI at:
+
+- [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+- [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
+
+
+
+  AWS:
+- [http://a85edb451a64c48f7bdb82cd73e46e5f-671232958.us-west-2.elb.amazonaws.com/swagger-ui/index.html](http://a85edb451a64c48f7bdb82cd73e46e5f-671232958.us-west-2.elb.amazonaws.com/swagger-ui/index.html)
+
+  Azure:
+- [http://20.253.174.189/swagger-ui/index.html](http://20.253.174.189/swagger-ui/index.html)
+
+
+
