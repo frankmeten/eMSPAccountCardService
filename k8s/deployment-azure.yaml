@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: emsp-account-card-service
-          image: emspacr.azurecr.io/emsp-account-card-service:latest
+          image: emspacr.azurecr.io/emsp-account-card-service:${{ github.sha }}
           ports:
             - containerPort: 8080
           env:
