@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: emsp-account-card-service
-          image: 010686621503.dkr.ecr.us-west-2.amazonaws.com/emsp-account-card-service:latest
+          image: IMAGE_PLACEHOLDER
           ports:
             - containerPort: 8080
           env:
