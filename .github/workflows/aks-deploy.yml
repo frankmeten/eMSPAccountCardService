@@ -2,7 +2,7 @@ name: Build and Deploy to AKS
 
 on:
   push:
-    branches: [main]
+    branches: [dev]
 
 env:
   REGISTRY: ${{ secrets.REGISTRY_LOGIN_SERVER }}
