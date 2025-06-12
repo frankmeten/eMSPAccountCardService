@@ -54,3 +54,5 @@ After starting the application, access the Swagger UI at:
 
 ## License
 Apache 2.0
+
+try Build and Deploy to AKS
