@@ -41,7 +41,8 @@ public class Account {
     @Enumerated(EnumType.STRING)
     private AccountStatus status;
 
-    @OneToMany(mappedBy = "account", cascade = CascadeType.ALL, orphanRemoval = true)
+    // @OneToMany(mappedBy = "account", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "account")
     private List<Card> cards;
 
     @Column(nullable = false)
