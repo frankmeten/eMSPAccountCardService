@@ -1,4 +1,4 @@
-package com.example.emsp.config;
+package com.frank.emsp.config;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;

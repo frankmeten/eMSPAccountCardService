@@ -1,6 +1,6 @@
-package com.example.emsp.repository;
+package com.frank.emsp.repository;
 
-import com.example.emsp.domain.Account;
+import com.frank.emsp.domain.Account;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

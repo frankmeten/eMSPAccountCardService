@@ -1,4 +1,4 @@
-package com.example.emsp.domain;
+package com.frank.emsp.domain;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;

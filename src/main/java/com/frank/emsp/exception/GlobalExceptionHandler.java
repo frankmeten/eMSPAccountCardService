@@ -1,4 +1,4 @@
-package com.example.emsp.exception;
+package com.frank.emsp.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,9 +1,9 @@
-package com.example.emsp;
+package com.frank.emsp;
 
-import com.example.emsp.domain.Account;
-import com.example.emsp.domain.Card;
-import com.example.emsp.repository.AccountRepository;
-import com.example.emsp.repository.CardRepository;
+import com.frank.emsp.domain.Account;
+import com.frank.emsp.domain.Card;
+import com.frank.emsp.repository.AccountRepository;
+import com.frank.emsp.repository.CardRepository;
 
 import jakarta.transaction.Transactional;
 

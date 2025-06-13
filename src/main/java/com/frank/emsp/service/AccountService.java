@@ -1,9 +1,9 @@
-package com.example.emsp.service;
+package com.frank.emsp.service;
 
-import com.example.emsp.domain.Account;
-import com.example.emsp.domain.Card;
-import com.example.emsp.repository.AccountRepository;
-import com.example.emsp.repository.CardRepository;
+import com.frank.emsp.domain.Account;
+import com.frank.emsp.domain.Card;
+import com.frank.emsp.repository.AccountRepository;
+import com.frank.emsp.repository.CardRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

@@ -1,7 +1,7 @@
-package com.example.emsp.service;
+package com.frank.emsp.service;
 
-import com.example.emsp.domain.Card;
-import com.example.emsp.repository.CardRepository;
+import com.frank.emsp.domain.Card;
+import com.frank.emsp.repository.CardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
